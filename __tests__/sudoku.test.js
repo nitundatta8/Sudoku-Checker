@@ -85,11 +85,11 @@ describe('Game', () => {
   });
 
   test('should correctly check if column has no repeating values', function(){
-
+    expect(game.findColumnDuplicate(0)).toEqual(false);
   });
 
   test('should correctly check if all 9 columns have no repeating values', function(){
-
+    expect(game.findColumnDuplicate(8)).toEqual(false);
   });
 
   test('should correctly check if block has no repeating values', function(){
@@ -103,3 +103,12 @@ describe('Game', () => {
 
 });
 
+// 0 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 1 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 2 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 3 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 4 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 5 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 6 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 7 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 8 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

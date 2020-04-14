@@ -29,7 +29,7 @@ Game.prototype.checkSudoku = function() {
 
 Game.prototype.findDuplicate = function(rowNum){
   var rowNumber = rowNum;
-  for (let n = 0; n <= rowNumber; n++){
+  for (var n = 0; n <= rowNumber; n++){
     for(var i=0; i<this.rows.length;i++){
       for(var j=i+1; j<this.rows.length;j++){
         if(this.rows[n].r[i] ===this.rows[n].r[j] ){
@@ -41,6 +41,36 @@ Game.prototype.findDuplicate = function(rowNum){
   return false;
 }
 
+Game.prototype.findColumnDuplicate = function(colNum){
+  var colNumber = colNum;
+  for (var n = 0; n <= colNumber; n++) {
+    for(var i = 0; i<this.rows.length; i++) {
+      for(var j=i+1;  j<this.rows.length; j++){
+        if(this.rows[i].r[n] === this.rows[j].r[n]){
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+
+// Game.prototype.findCellDuplicate = function(cellNum) {
+//   var cellNumber = cellNum;
+
+//   for (var n = 0; n <= cellNum; n++) {
+//     for(var i = 0; i <= 2; i++ ) {
+//       for(var j = i+1; j <= 2; j++){
+//         for(var k = )
+//         if(this.rows[i].r[])
+//       }
+//     }
+
+//   }
+// }
+
+// if rows[i].r[]
 
 
 export function Row(r) {
