@@ -81,7 +81,7 @@ describe('Game', () => {
   });
 
   test('should correctly check if all 9 rows have no repeating values', function(){
-    
+    expect(game.findDuplicate(8)).toEqual(false);
   });
 
   test('should correctly check if column has no repeating values', function(){
